@@ -25,7 +25,7 @@ export default function Home() {
           <TodoForm />
         </TodoSheet>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
         <div className="sm:col-span-2">
           <TodoListSection title="Today" todos={upcoming.today} />
         </div>
@@ -36,8 +36,6 @@ export default function Home() {
         <div className="">
           <TodoListSection title="This week" todos={upcoming.this_week} />
         </div>
-
-        {/* <TodoStats stats={stats} /> */}
       </div>
     </div >
   );
