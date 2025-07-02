@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -23,7 +24,10 @@ const TodoFilter = ({ currentStatus, category }) => {
             <Button
               variant={s === currentStatus ? "default" : "outline"}
               size="sm"
-              className="rounded-full capitalize px-3"
+              className={cn(
+                "rounded-full capitalize px-3 h-8 min-w-[80px]", // vagy amennyi elég
+                "focus-visible:ring-0 focus-visible:ring-offset-0", // elnyomja az outline-t
+              )}
             >
               {s}
             </Button>
