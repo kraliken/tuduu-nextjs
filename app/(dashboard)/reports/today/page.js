@@ -1,6 +1,7 @@
+export const dynamic = "force-dynamic"
+
 import DoneTodos from "@/components/DoneTodos"
 import DueTodayTodos from "@/components/DueTodayTodos"
-import { Badge } from "@/components/ui/badge"
 import { getTodayTodos } from "@/lib/actions/todo.actions"
 
 function areAllArraysEmpty(obj) {
