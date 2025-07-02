@@ -99,7 +99,7 @@ export function AppSidebar({ user }) {
                             {reportLinks.map(report => (
                                 <SidebarMenuItem key={report.label}>
                                     <SidebarMenuButton asChild>
-                                        <Link href="/">
+                                        <Link href={report.href}>
                                             {report.icon}
                                             {report.label}
                                         </Link>

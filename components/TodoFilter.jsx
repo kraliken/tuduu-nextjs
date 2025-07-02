@@ -25,7 +25,7 @@ const TodoFilter = ({ currentStatus, category }) => {
               variant={s === currentStatus ? "default" : "outline"}
               size="sm"
               className={cn(
-                "rounded-full capitalize px-3 h-8 min-w-[80px]", // vagy amennyi elég
+                "rounded-full capitalize px-2 sm:px-3 h-8 min-w-[70px] sm:min-w-[80px]", // vagy amennyi elég
                 "focus-visible:ring-0 focus-visible:ring-offset-0", // elnyomja az outline-t
               )}
             >

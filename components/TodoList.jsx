@@ -1,5 +1,4 @@
 import TodoListItem from "./TodoListItem"
-import { Separator } from "./ui/separator"
 
 const TodoList = ({ todos }) => {
 
@@ -8,7 +7,6 @@ const TodoList = ({ todos }) => {
             {todos.map(todo => {
                 return (
                     <TodoListItem key={todo.id} todo={todo} />
-
                 )
             })}
         </>

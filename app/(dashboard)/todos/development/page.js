@@ -1,6 +1,5 @@
 
 import { getTodos } from '@/lib/actions/todo.actions';
-import PersonalTodos from '@/components/PersonalTodos';
 import TodoSheet from '@/components/TodoSheet';
 import TodoForm from '@/components/TodoForm';
 import { Suspense } from 'react';
