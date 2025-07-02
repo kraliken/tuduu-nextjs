@@ -14,10 +14,8 @@ const TodoListSection = ({ title, todos, paginateAfter = 2 }) => {
     const startIndex = (currentPage - 1) * todosPerPage
     const currentTodos = todos.slice(startIndex, startIndex + todosPerPage)
 
-    const todoHeightPx = 85
+    const todoHeightPx = 93
     const minHeight = paginateAfter * todoHeightPx
-
-    console.log(minHeight);
 
     return (
         <Card className="w-full shadow-none py-4 gap-4">
@@ -27,7 +25,6 @@ const TodoListSection = ({ title, todos, paginateAfter = 2 }) => {
                 </CardTitle>
             </CardHeader>
             <CardContent style={{ minHeight: `${minHeight}px` }}>
-                {/* <CardContent > */}
                 <TodoList todos={currentTodos} />
             </CardContent>
             <CardFooter>
