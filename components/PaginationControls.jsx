@@ -11,7 +11,7 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
 
     return (
         <Pagination>
-            <PaginationContent className="flex gap-3">
+            <PaginationContent className="flex gap-2">
                 <PaginationItem>
                     <Button
                         disabled={currentPage === 1}
@@ -36,7 +36,7 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
                                 className={cn(
                                     "w-9 h-9", // vagy pl. w-10 h-10 ha nagyobbat akarsz
                                     "focus-visible:ring-0 focus-visible:ring-offset-0", // kikapcsolja a focus ringet
-                                    isActive && "border border-muted-foreground text-primary"
+                                    isActive && "border border-muted text-primary"
                                 )}
                             >
                                 {i + 1}

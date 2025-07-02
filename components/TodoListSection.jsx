@@ -30,7 +30,7 @@ const TodoListSection = ({ title, todos, allTodosCount, paginateAfter = 2 }) => 
             {isEmpty && (
                 <CardContent>
                     <div className="w-full col-span-full flex justify-center py-8 text-gray-500">
-                        No todos yet. Add one above!
+                        {title === "Tomorrow" ? "No todos for tomorrow." : `No todos for ${title.toLowerCase()}. Add one above!`}
                     </div>
                 </CardContent>
             )}

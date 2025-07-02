@@ -27,13 +27,13 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
         <div className="sm:col-span-2">
-          <TodoListSection title="Today" todos={upcoming.today} paginateAfter={2} />
+          <TodoListSection title="Today" todos={upcoming.today} allTodosCount={upcoming.today.length} paginateAfter={2} />
         </div>
         <div className="">
           <TodoListSection title="Tomorrow" todos={upcoming.tomorrow} allTodosCount={upcoming.tomorrow.length} paginateAfter={2} />
         </div>
         <div className="">
-          <TodoListSection title="This week" todos={upcoming.this_week} paginateAfter={2} />
+          <TodoListSection title="This week" todos={upcoming.this_week} allTodosCount={upcoming.this_week.length} paginateAfter={2} />
         </div>
       </div>
     </div >

@@ -23,7 +23,7 @@ const TodoFilter = ({ currentStatus, category }) => {
             <Button
               variant={s === currentStatus ? "default" : "outline"}
               size="sm"
-              className="rounded-full capitalize px-2"
+              className="rounded-full capitalize px-3"
             >
               {s}
             </Button>
