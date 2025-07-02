@@ -30,7 +30,7 @@ export default function Home() {
           <TodoListSection title="Today" todos={upcoming.today} paginateAfter={2} />
         </div>
         <div className="">
-          <TodoListSection title="Tomorrow" todos={upcoming.tomorrow} paginateAfter={2} />
+          <TodoListSection title="Tomorrow" todos={upcoming.tomorrow} allTodosCount={upcoming.tomorrow.length} paginateAfter={2} />
         </div>
         <div className="">
           <TodoListSection title="This week" todos={upcoming.this_week} paginateAfter={2} />

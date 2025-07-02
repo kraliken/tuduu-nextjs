@@ -3,10 +3,12 @@ import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator"
 import TodoSheet from "./TodoSheet";
 import { Button } from "./ui/button";
-import { ChevronRight, Pencil } from "lucide-react";
+import { BadgeCheckIcon, ChevronRight, Pencil } from "lucide-react";
 import TodoForm from "./TodoForm";
 
 const TodoListItem = ({ todo }) => {
+
+    console.log(todo.status);
 
     return (
         <div>
@@ -31,7 +33,10 @@ const TodoListItem = ({ todo }) => {
                 <div className="flex items-center gap-4">
                     <Badge className={categoryColor[todo.category]}>{todo.category}</Badge>
                     <div className="w-px h-8 bg-gray-200 dark:bg-gray-700"></div>
-                    <Badge className={statusColor[todo.status]}>{todo.status}</Badge>
+                    <Badge variant={`${todo.status === "backlog" ? "" : todo.status === "progress" ? "secondary" : "outline"}`} >
+                        {todo.status === "done" && <BadgeCheckIcon />}
+                        {todo.status}
+                    </Badge>
                 </div>
             </div>
         </div>
