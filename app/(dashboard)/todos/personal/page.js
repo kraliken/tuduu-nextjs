@@ -30,7 +30,7 @@ const PersonalTodosPage = async ({ searchParams }) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="sm:col-span-2">
-                    <TodoListSection title="List" todos={filtered} />
+                    <TodoListSection title="List" todos={filtered} paginateAfter={3} />
                 </div>
             </div>
         </div >

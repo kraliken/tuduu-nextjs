@@ -152,7 +152,7 @@ const TodoForm = ({ todo, onSuccess }) => {
               mode="single"
               selected={selectedDate}
               onSelect={setSelectedDate}
-              initialFocus
+            // initialFocus
             />
           </PopoverContent>
         </Popover>
