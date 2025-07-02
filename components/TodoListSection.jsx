@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import PaginationControls from "./PaginationControls"
 import TodoList from "./TodoList"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
@@ -19,6 +19,10 @@ const TodoListSection = ({ title, todos, allTodosCount, paginateAfter = 2 }) => 
 
     const isFiltered = todos.length === 0 && allTodosCount > 0
     const isEmpty = todos.length === 0 && allTodosCount === 0
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [todos])
 
     return (
         <Card className="w-full shadow-none py-4 gap-4">
