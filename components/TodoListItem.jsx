@@ -11,7 +11,7 @@ const TodoListItem = ({ todo }) => {
     return (
         <div>
             <Separator />
-            <div className="p-4 pl-6">
+            <div className="p-3 pl-8">
                 <div className="flex items-center justify-between">
                     <h4 className="scroll-m-20 text-md font-semibold tracking-tight mb-3">
                         {todo.title}
