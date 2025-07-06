@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge"
 const { Card, CardHeader, CardTitle, CardContent } = require("./ui/card")
 
 
-const DueTodayTodos = ({ title, todos }) => {
+const DueTodos = ({ title, todos }) => {
 
     const { development, work, personal } = todos
 
@@ -30,4 +30,4 @@ const DueTodayTodos = ({ title, todos }) => {
     )
 }
 
-export default DueTodayTodos
+export default DueTodos
