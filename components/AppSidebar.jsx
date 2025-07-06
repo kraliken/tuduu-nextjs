@@ -15,11 +15,12 @@ import {
     SidebarSeparator,
 } from "@/components/ui/sidebar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { ChevronsRight, ChevronUp, ListCheck, ListTodo, User2 } from "lucide-react";
+import { ChevronDown, ChevronsRight, ChevronUp, ListCheck, ListTodo, ReceiptText, User2 } from "lucide-react";
 import Link from "next/link";
 import { signout } from "@/lib/actions/auth.actions";
 import { useTodos } from "@/context/TodoContext";
 import { listLinks, reportLinks } from "@/lib/constants";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 
 export function AppSidebar({ user }) {
 
@@ -73,24 +74,32 @@ export function AppSidebar({ user }) {
                     </SidebarGroupContent>
                 </SidebarGroup>
 
-                <SidebarGroup>
-                    <SidebarGroupLabel>LISTS</SidebarGroupLabel>
-                    <SidebarGroupContent>
-                        <SidebarMenu>
-                            {listLinks.map(list => (
-                                <SidebarMenuItem key={list.label}>
-                                    <SidebarMenuButton asChild>
-                                        <Link href={list.href}>
-                                            {list.icon}
-                                            {list.label}
-                                        </Link>
-                                    </SidebarMenuButton>
-                                    <SidebarMenuBadge className={list.colorKey}>{stats[list.label.toLowerCase()]}</SidebarMenuBadge>
-                                </SidebarMenuItem>
-                            ))}
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
+                <Collapsible defaultOpen className="group/collapsible">
+                    <SidebarGroup>
+                        <CollapsibleTrigger>
+                            <SidebarGroupLabel>LISTS
+                                <ChevronDown className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                            </SidebarGroupLabel>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                            <SidebarGroupContent>
+                                <SidebarMenu>
+                                    {listLinks.map(list => (
+                                        <SidebarMenuItem key={list.label}>
+                                            <SidebarMenuButton asChild>
+                                                <Link href={list.href}>
+                                                    {list.icon}
+                                                    {list.label}
+                                                </Link>
+                                            </SidebarMenuButton>
+                                            <SidebarMenuBadge className={list.colorKey}>{stats[list.label.toLowerCase()]}</SidebarMenuBadge>
+                                        </SidebarMenuItem>
+                                    ))}
+                                </SidebarMenu>
+                            </SidebarGroupContent>
+                        </CollapsibleContent>
+                    </SidebarGroup>
+                </Collapsible>
 
                 <SidebarGroup>
                     <SidebarGroupLabel>REPORTS</SidebarGroupLabel>
@@ -109,6 +118,23 @@ export function AppSidebar({ user }) {
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
+
+                {/* <SidebarGroup>
+                    <SidebarGroupLabel>FILE UPLOAD</SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
+                                <SidebarMenuButton asChild>
+                                    <Link href="/upload/vodafone">
+                                        <ReceiptText />
+                                        Vodafone
+                                    </Link>
+                                </SidebarMenuButton>
+                            </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup> */}
+
 
             </SidebarContent>
 
