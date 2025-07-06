@@ -119,7 +119,7 @@ export function AppSidebar({ user }) {
                     </SidebarGroupContent>
                 </SidebarGroup>
 
-                {/* <SidebarGroup>
+                <SidebarGroup>
                     <SidebarGroupLabel>FILE UPLOAD</SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
@@ -133,8 +133,7 @@ export function AppSidebar({ user }) {
                             </SidebarMenuItem>
                         </SidebarMenu>
                     </SidebarGroupContent>
-                </SidebarGroup> */}
-
+                </SidebarGroup>
 
             </SidebarContent>
 
