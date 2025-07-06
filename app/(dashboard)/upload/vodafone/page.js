@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import DataTable from "@/components/DataTable"
 import FileUploadForm from "@/components/FileUploadForm"
 import InvoiceUploadSheet from "@/components/InvoiceUploadSheet"
